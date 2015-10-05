@@ -1,8 +1,8 @@
 <?php
-$VarExibirUsuarios = $clsUsuarios->ExibirUsuarios();
+$VarExibeTrabalhos = $clsTrabalhos->ExibirTrabalhos();
 ?>
-<h2>Lista Usuários</h2>
-<a href="?pagina=cadusuarios"><input type="submit" value="Cadastrar" class="btnmenu" style="float:right" /></a>
+<h2>Lista Trabalhos Científico</h2>
+<a href="?pagina=cadtrabalhos"><input type="submit" value="Cadastrar" class="btnmenu" style="float:right" /></a>
 <br/><br/>
 <form method="post" name="listausuarios" id="listausuarios">
     <!-- <input type="text" class="form-control" placeholder="Consultar Fisioterapeuta" id="pesquisar" name="pesquisar">
@@ -11,22 +11,22 @@ $VarExibirUsuarios = $clsUsuarios->ExibirUsuarios();
           <thead>
                <tr>
                     <th>Código</th>
-                    <th>Nome</th>
-                    <th>E-mail</th>
+                    <th>Autor</th>
+                    <th>Data</th>
                     <th>Opções</th>
                </tr>
           </thead>
           <?php
-          for ($i = 0; $i < count($VarExibirUsuarios); $i++) {
+          for ($i = 0; $i < count($VarExibeTrabalhos); $i++) {
                ?>
                <tbody border="solid 1px" bordercolor="#FFFFFF">
                     <tr>
-                         <td><?php echo $VarExibirUsuarios [$i]['IDUSUARIO']; ?></td>
-                         <td><?php echo $VarExibirUsuarios [$i]['NOME']; ?></td>
-                         <td><?php echo $VarExibirUsuarios [$i]['EMAIL']; ?></td>
-                         <td><a href="#" onclick="javascript:confirmar(<?= $VarExibirUsuarios[$i]['IDUSUARIO']; ?>)" title="Apagar" ><img src="img/apagar.png" /></a>
+                         <td><?php echo $VarExibeTrabalhos [$i]['IDTRABALHOCIENTIFICO']; ?></td>
+                         <td><?php echo $VarExibeTrabalhos [$i]['AUTOR']; ?></td>
+                         <td><?php echo $VarExibeTrabalhos [$i]['DATA_TRABALHO']; ?></td>
+                         <td><a href="#" onclick="javascript:confirmar(<?= $VarExibeTrabalhos[$i]['IDTRABALHOCIENTIFICO']; ?>)" title="Apagar" ><img src="img/apagar.png" /></a>
 
-                              <a href="?pagina=editarusuarios&id=<?php echo $VarExibirUsuarios[$i]['IDUSUARIO']; ?>"  title="Visualizar"><img src="img/visualizar.png" /></a>
+                              <a href="?pagina=editartrabalhos&id=<?php echo $VarExibeTrabalhos[$i]['IDTRABALHOCIENTIFICO']; ?>"  title="Visualizar"><img src="img/visualizar.png" /></a>
                              
 
                          </td>
@@ -39,13 +39,13 @@ $VarExibirUsuarios = $clsUsuarios->ExibirUsuarios();
 
      </table>
      <br/>
-     Total de <strong><?php echo count($VarExibirUsuarios); ?></strong> Usuarios Ativos.
+     Total de <strong><?php echo count($VarExibeTrabalhos); ?></strong> Usuarios Ativos.
      <br/>
 </form>
 <script type="text/javascript">
      function confirmar(codigo_usuario) { // pode ser qualquer nome
           if (confirm("Deseja Realmente Excluir?")) {
-               window.location = "?pagina=acaousuarios&acao=excluir&id=" + codigo_usuario; // pode ser qualquer nome
+               window.location = "?pagina=acaotrabalhos&acao=excluir&id=" + codigo_usuario; // pode ser qualquer nome
                return true;
           } else {
                return false;

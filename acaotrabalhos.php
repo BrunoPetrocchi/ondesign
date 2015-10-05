@@ -1,33 +1,33 @@
 <?php
 
 if ($_GET['acao'] == 'cadastrar') {
-     $VarInserirUsuario = $clsUsuarios->CadUsuarios($_POST['nome'], $_POST['email'], $_POST['senha']);
+     $VarInserirTrabalhos = $clsTrabalhos->CadTrabalhos($_POST['nome'], $_POST['email'], $_POST['datepicker']);
      //exit();
-     echo '<script>alert("Usuario Salvo com Sucesso");</script>';
-     echo "<script type='text/javascript'>window.location='?pagina=listausuarios'; </script>";
+     echo '<script>alert("Trabalho Científico Salvo com Sucesso");</script>';
+     echo "<script type='text/javascript'>window.location='?pagina=listatrabalhos'; </script>";
 }
 ?>
 
 <?php
 
 if ($_GET['acao'] == 'editar') {
-     $VarEditarUsuarios = $clsUsuarios->EditarUsuario($_GET['id'], $_POST['nome'], $_POST['email'], $_POST['senha']);
+     $VarEditarTrabalhos = $clsTrabalhos->EditarTrabalhos($_GET['id'],$_POST['nome'], $_POST['email'], $_POST['datepicker']);
      //exit();
      echo '<script>alert("Usuario Alterado com Sucesso");</script>';
-     echo "<script type='text/javascript'>window.location='?pagina=listausuarios'; </script>";
+     echo "<script type='text/javascript'>window.location='?pagina=listatrabalhos'; </script>";
 }
 ?>
 
 <?php
 if ($_GET['acao'] == 'excluir') {
-     $VarExcluirUsuario = $clsUsuarios->ApagarUsuario($_GET['id']);
+     $VarExcluirTrabalhos = $clsTrabalhos->ApagarTrabalhos($_GET['id']);
 }
 
-if ($VarExcluirUsuario == 1) {
+if ($VarExcluirTrabalhos == 1) {
      ?>    
      <script type="text/javascript">
           alert("Exclusão Efetuada com Sucesso!");
-          document.location.href = '?pagina=listausuarios';
+          document.location.href = '?pagina=listatrabalhos';
      </script>
 
      <?php

@@ -9,13 +9,13 @@ class Videos {
     }
     
     public function  CadVideos($url, $nome){
-        $sql = "INSERT INTO posgraduacao.tblvideos values (NULL, '$url', '$nome')";
-        //echo $sql;
+        $sql = "INSERT INTO posgraduacao.tblvideos values (NULL, '$url', '$nome',0)";
+       // echo $sql;
         return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
     }
     
     public function  ExibirVideos(){
-        $sql="SELECT IDVIDEO, URL, NOME FROM posgraduacao.tblvideos WHERE APAGADO = 1";
+        $sql="SELECT IDVIDEO, URL, NOME FROM posgraduacao.tblvideos WHERE APAGADO = 0 ORDER BY IDVIDEO DESC ";
         return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
     }
     
@@ -31,7 +31,7 @@ class Videos {
     }
     
     public function ApagarVideos($id) {
-        $sql = "UPDATE posgraduacao.tblvideos SET APAGADO = 0 WHERE IDVIDEO = '$id'";
+        $sql = "UPDATE posgraduacao.tblvideos SET APAGADO = 1 WHERE IDVIDEO = '$id'";
         //echo $sql;
         return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
     }

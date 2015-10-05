@@ -6,6 +6,7 @@ $db = new MysqlManager();
 include ("classe/classVideo.php"); $clsVideos = new Videos();
 include ("classe/classEventos.php"); $clsEventos = new Eventos();
 include ("classe/classUsuarios.php"); $clsUsuarios = new Usuarios();
+include ("classe/classTrabalhos.php"); $clsTrabalhos = new Trabalhos();
 
 ?>		
 
@@ -45,21 +46,25 @@ include ("classe/classUsuarios.php"); $clsUsuarios = new Usuarios();
                             $_GET['pagina'] == "acaousuarios" ||
                             $_GET['pagina'] == "acaocurso" ||
                             $_GET['pagina'] == "acaoeventos" ||
+                            $_GET['pagina'] == "acaotrabalhos" ||
                             $_GET['pagina'] == "cadartigos" ||
                             $_GET['pagina'] == "cadvideo" ||
                             $_GET['pagina'] == "cadusuarios" ||
                             $_GET['pagina'] == "cadcursos" ||
                             $_GET['pagina'] == "cadeventos" ||
+                            $_GET['pagina'] == "cadtrabalhos" ||
                             $_GET['pagina'] == "listaartigos" ||
                             $_GET['pagina'] == "listavideo" ||
                             $_GET['pagina'] == "listausuarios" ||
                             $_GET['pagina'] == "listacursos" ||
                             $_GET['pagina'] == "listaeventos" ||
+                            $_GET['pagina'] == "listatrabalhos" ||
                             $_GET['pagina'] == "editarartigos" ||
                             $_GET['pagina'] == "editarusuarios" ||
                             $_GET['pagina'] == "editarvideo" ||
                             $_GET['pagina'] == "editarcursos" ||
                             $_GET['pagina'] == "editareventos" ||
+                            $_GET['pagina'] == "editartrabalhos" ||
                             $_GET['pagina'] == "principal"
                     ) {
                          require_once ($_GET['pagina'] . ".php");

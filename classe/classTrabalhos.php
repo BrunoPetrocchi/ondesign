@@ -9,7 +9,7 @@ class Trabalhos {
     }
     
     public function CadTrabalhos($titulo,$autor,$data_trabalho) {
-        $sql = "INSERT INTO posgraduacao.tbltrabalhoscientificos VALUES(NULL,'$titulo','$autor','$data_trabalho',0,0)";
+        $sql = "INSERT INTO posgraduacao.tbltrabalhoscientificos VALUES(NULL,'$titulo','$autor','$data_trabalho',0,0,0)";
         //echo $sql;
         return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
     }
@@ -20,6 +20,12 @@ class Trabalhos {
           WHERE APAGADO = 0 ORDER BY IDTRABALHOCIENTIFICO DESC";
         return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
     }
+    
+    public function ExibirAnexoTrabalhos($id){
+        $sql="SELECT IDTRABALHOCIENTIFICO, ANEXO, APAGADO_ANEXO FROM tbltrabalhoscientificos WHERE IDTRABALHOCIENTIFICO = '$id'";
+        return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
+    }
+    
     public function ExibirTrabalhosId($id){
         $sql="SELECT IDTRABALHOCIENTIFICO, TITULO, AUTOR, DATA_TRABALHO, ANEXO 
           FROM posgraduacao.tbltrabalhoscientificos

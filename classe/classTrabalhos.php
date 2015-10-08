@@ -15,19 +15,15 @@ class Trabalhos {
     }
     
     public function ExibirTrabalhos(){
-        $sql="SELECT IDTRABALHOCIENTIFICO, TITULO, AUTOR, DATA_TRABALHO, ANEXO 
+        $sql="SELECT IDTRABALHOCIENTIFICO, TITULO, AUTOR, DATA_TRABALHO
           FROM posgraduacao.tbltrabalhoscientificos
           WHERE APAGADO = 0 ORDER BY IDTRABALHOCIENTIFICO DESC";
         return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
     }
     
-    public function ExibirAnexoTrabalhos($id){
-        $sql="SELECT IDTRABALHOCIENTIFICO, ANEXO, APAGADO_ANEXO FROM tbltrabalhoscientificos WHERE IDTRABALHOCIENTIFICO = '$id'";
-        return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
-    }
-    
+     
     public function ExibirTrabalhosId($id){
-        $sql="SELECT IDTRABALHOCIENTIFICO, TITULO, AUTOR, DATA_TRABALHO, ANEXO 
+        $sql="SELECT IDTRABALHOCIENTIFICO, TITULO, AUTOR, DATA_TRABALHO 
           FROM posgraduacao.tbltrabalhoscientificos
           WHERE IDTRABALHOCIENTIFICO = '$id'";
         return MysqlManager::ExecutaConsultaMysql($sql, $this->db);

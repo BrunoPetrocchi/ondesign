@@ -41,7 +41,7 @@ $VarExibirTrabalhos = $clsTrabalhos->ExibirTrabalhosId($_GET['id']);
 <hr/>
 <br/><br/>
 <?php
-$VarExibirAnexoLista = $clsTrabalhos -> ExibirAnexoTrabalhos ($_GET['id']);
+$VarExibirAnexoLista = $clsTrabalhos->ExibirAnexoTrabalhos($_GET['id']);
 ?>
 <form method="post" name="listaanexotrabalho" id="listaanexotrabalho">
     <!-- <input type="text" class="form-control" placeholder="Consultar Fisioterapeuta" id="pesquisar" name="pesquisar">
@@ -61,7 +61,7 @@ $VarExibirAnexoLista = $clsTrabalhos -> ExibirAnexoTrabalhos ($_GET['id']);
                     <tr>
                          <td><?php echo $VarExibirAnexoLista [$i]['IDTRABALHOCIENTIFICO']; ?></td>
                          <td><?php echo $VarExibirAnexoLista [$i]['ANEXO']; ?></td>
-                            <td><a href="#" onclick="javascript:confirmar(<?= $VarExibirAnexoLista[$i]['IDTRABALHOCIENTIFICO']; ?>)" title="Apagar" ><img src="img/apagar.png" /></a>
+                         <td><a href="#" onclick="javascript:confirmar(<?= $VarExibirAnexoLista[$i]['IDTRABALHOCIENTIFICO']; ?>)" title="Apagar" ><img src="img/apagar.png" /></a>
 
                               <a href="?pagina=editartrabalhos&id=<?php echo $VarExibirAnexoLista[$i]['IDTRABALHOCIENTIFICO']; ?>"  title="Visualizar"><img src="img/visualizar.png" /></a>
 

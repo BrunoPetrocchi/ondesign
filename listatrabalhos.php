@@ -13,7 +13,6 @@ $VarExibeTrabalhos = $clsTrabalhos->ExibirTrabalhos();
                     <th>Código</th>
                     <th>Autor</th>
                     <th>Data</th>
-                    <th>Anexo</th>
                     <th>Opções</th>
                </tr>
           </thead>
@@ -25,19 +24,6 @@ $VarExibeTrabalhos = $clsTrabalhos->ExibirTrabalhos();
                          <td><?php echo $VarExibeTrabalhos [$i]['IDTRABALHOCIENTIFICO']; ?></td>
                          <td><?php echo $VarExibeTrabalhos [$i]['AUTOR']; ?></td>
                          <td><?php echo $VarExibeTrabalhos [$i]['DATA_TRABALHO']; ?></td>
-                         <td>
-                              <?php
-                              if ($VarExibeTrabalhos [0]['ANEXO'] == 0) {
-                                   ?>
-                                   <img src="img/arquivo_off.png"/>
-                                   <?php
-                              }else{
-                                   ?>
-                                   <img src="img/arquivo.png"/>
-                                   <?php
-                              }
-                              ?>
-                         </td>
                          <td><a href="#" onclick="javascript:confirmar(<?= $VarExibeTrabalhos[$i]['IDTRABALHOCIENTIFICO']; ?>)" title="Apagar" ><img src="img/apagar.png" /></a>
 
                               <a href="?pagina=editartrabalhos&id=<?php echo $VarExibeTrabalhos[$i]['IDTRABALHOCIENTIFICO']; ?>"  title="Visualizar"><img src="img/visualizar.png" /></a>

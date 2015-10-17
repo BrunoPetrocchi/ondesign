@@ -14,6 +14,7 @@ class Trabalhos {
         return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
     }
     
+ 
     public function ExibirTrabalhos(){
         $sql="SELECT IDTRABALHOCIENTIFICO, TITULO, AUTOR, DATA_TRABALHO
           FROM posgraduacao.tbltrabalhoscientificos
@@ -25,6 +26,12 @@ class Trabalhos {
     public function ExibirTrabalhosId($id){
         $sql="SELECT IDTRABALHOCIENTIFICO, TITULO, AUTOR, DATA_TRABALHO 
           FROM posgraduacao.tbltrabalhoscientificos
+          WHERE IDTRABALHOCIENTIFICO = '$id'";
+        return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
+    }
+    
+    public function ExibirAnexoTrabalhoCientifico($id){
+        $sql="SELECT IDANEXOTC, IDTRABALHOCIENTIFICO, NOME FROM posgraduacao.tblanexotrabalhoscientificos
           WHERE IDTRABALHOCIENTIFICO = '$id'";
         return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
     }

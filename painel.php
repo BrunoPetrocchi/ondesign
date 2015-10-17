@@ -53,6 +53,7 @@ include ("classe/classTrabalhos.php"); $clsTrabalhos = new Trabalhos();
                             $_GET['pagina'] == "cadcursos" ||
                             $_GET['pagina'] == "cadeventos" ||
                             $_GET['pagina'] == "cadtrabalhos" ||
+                            $_GET['pagina'] == "cadanexotrabalhos" ||
                             $_GET['pagina'] == "listaartigos" ||
                             $_GET['pagina'] == "listavideo" ||
                             $_GET['pagina'] == "listausuarios" ||

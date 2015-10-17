@@ -37,34 +37,33 @@ $VarExibirTrabalhos = $clsTrabalhos->ExibirTrabalhosId($_GET['id']);
           </div>
      </div>
 </form>
-<br/><br/>
+
 <hr/>
 <br/><br/>
 <?php
-$VarExibirAnexoLista = $clsTrabalhos->ExibirAnexoTrabalhos($_GET['id']);
+$VarAnexoTrabalhoCientifico = $clsTrabalhos -> ExibirAnexoTrabalhoCientifico($_GET['id']);
 ?>
+<a href="?pagina=cadanexotrabalhos"><input type="submit" value="Anexar" class="btnmenu" style="float:right" /></a>
+<br/><br/>
 <form method="post" name="listaanexotrabalho" id="listaanexotrabalho">
-    <!-- <input type="text" class="form-control" placeholder="Consultar Fisioterapeuta" id="pesquisar" name="pesquisar">
-     <br/>-->
-     <table width="100%"  border="1" bordercolor="#CCCCCC" style="border-collapse:collapse;" cellpadding="0" cellspacing="0" id="tbl_relatorio" >
+      <table width="100%"  border="1" bordercolor="#CCCCCC" style="border-collapse:collapse;" cellpadding="0" cellspacing="0" id="tbl_relatorio" >
           <thead>
                <tr>
-                    <th>Código</th>
+                    <th>Código Anexo</th>
                     <th>Anexo</th>
                     <th>Opções</th>
                </tr>
           </thead>
           <?php
-          for ($i = 0; $i < count($VarExibeTrabalhos); $i++) {
+          for ($i = 0; $i < count($VarAnexoTrabalhoCientifico); $i++) {
                ?>
                <tbody border="solid 1px" bordercolor="#FFFFFF">
                     <tr>
-                         <td><?php echo $VarExibirAnexoLista [$i]['IDTRABALHOCIENTIFICO']; ?></td>
-                         <td><?php echo $VarExibirAnexoLista [$i]['ANEXO']; ?></td>
+                         <td><?php echo $VarAnexoTrabalhoCientifico [$i]['IDANEXOTC']; ?></td>
+                         <td><?php echo $VarAnexoTrabalhoCientifico [$i]['NOME']; ?></td>
                          <td><a href="#" onclick="javascript:confirmar(<?= $VarExibirAnexoLista[$i]['IDTRABALHOCIENTIFICO']; ?>)" title="Apagar" ><img src="img/apagar.png" /></a>
 
                               <a href="?pagina=editartrabalhos&id=<?php echo $VarExibirAnexoLista[$i]['IDTRABALHOCIENTIFICO']; ?>"  title="Visualizar"><img src="img/visualizar.png" /></a>
-
 
                          </td>
                     </tr>
@@ -73,11 +72,9 @@ $VarExibirAnexoLista = $clsTrabalhos->ExibirAnexoTrabalhos($_GET['id']);
                <?php
           }
           ?>
-
+          
      </table>
-     <br/>
-     Total de <strong><?php echo count($VarExibeTrabalhos); ?></strong> Usuarios Ativos.
-     <br/>
+     <br/><br/><br/><br/>     
 </form>
 <script type="text/javascript">
      function confirmar(codigo_usuario) { // pode ser qualquer nome

@@ -7,6 +7,7 @@ include ("classe/classVideo.php"); $clsVideos = new Videos();
 include ("classe/classEventos.php"); $clsEventos = new Eventos();
 include ("classe/classUsuarios.php"); $clsUsuarios = new Usuarios();
 include ("classe/classTrabalhos.php"); $clsTrabalhos = new Trabalhos();
+include ("classe/classArtigo.php"); $clsArtigos = new Artigos();
 
 ?>		
 

@@ -48,6 +48,12 @@ class Trabalhos {
         //echo $sql;
         return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
     }
+    
+    public function InserirAnexoTrabalhos($id) {
+        $sql = "INSERT INTO posgraduacao.tblanexotrablhoscientificos VALUES (NULL'$idtrab','$anexo',0)";
+        //echo $sql;
+        return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
+    }
 }
 ?>
 

@@ -7,7 +7,7 @@ $VarExibirArtigos = $clsArtigos->ConsultarArtigoId($_GET['id'])
         <div class="col-lg-8 col-lg-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Editar Artigo</h3>
+                    <h3 class="panel-title">Artigo</h3>
                 </div>
 
                 <div class="panel-body">  

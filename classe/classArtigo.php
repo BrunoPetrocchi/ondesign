@@ -10,6 +10,7 @@ class Artigos {
     
     public function  CadArtigos($titulo, $autor, $data, $artigo){
         $sql = "INSERT INTO posgraduacao.tblartigos values (NULL, '$titulo', '$autor', '$data', '$artigo',0)";
+        echo $sql;
         return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
     }
     

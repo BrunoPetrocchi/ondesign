@@ -1,7 +1,7 @@
 <script type="text/javascript" src="js/scripts.js"></script>
 <a href="?pagina=listatrabalhos"><input type="submit" value="Voltar" class="btnmenu" style="float:right" /></a>
 <br/><br/>
-<form method="post" name="cadtrabalhos" class="cadtrabalhos" action="?pagina=acaotrabalhos&acao=cadastrar">
+<form method="post" name="cadtrabalhos" class="cadtrabalhos" action="?pagina=acaotrabalhos&acao=cadastrar_anexo">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
             <div class="panel panel-default">

@@ -18,7 +18,7 @@
 
                             <div class="form-group">
                                 <label class="control-label">Autor</label>
-                                <input type="text" id="email" name="email" class="form-control" placeholde="Informe o E-mail"></input>
+                                <input type="text" id="autor" name="autor" class="form-control" placeholde="Informe o E-mail"></input>
                             </div> 
                             <div class="form-group">
                                 <label class="control-label" >Data</label>

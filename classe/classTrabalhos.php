@@ -8,9 +8,9 @@ class Trabalhos {
         $this->db = $GLOBALS[db_homepage];
     }
     
-    public function CadTrabalhos($titulo,$autor,$data_trabalho) {
-        $sql = "INSERT INTO posgraduacao.tbltrabalhoscientificos VALUES(NULL,'$titulo','$autor','$data_trabalho',0,0,0)";
-        //echo $sql;
+    public function CadTrabalhos($titulo,$autor,$data_trabalho,$anexo) {
+        $sql = "INSERT INTO posgraduacao.tbltrabalhoscientificos VALUES (NULL,'$titulo','$autor','$data_trabalho','$anexo',0)";
+        echo $sql;
         return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
     }
     
@@ -49,9 +49,19 @@ class Trabalhos {
         return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
     }
     
-    public function InserirAnexoTrabalhos($id) {
-        $sql = "INSERT INTO posgraduacao.tblanexotrablhoscientificos VALUES (NULL'$idtrab','$anexo',0)";
-        //echo $sql;
+     public function ExibirTrabalhosMax(){
+        $sql="SELECT MAX(IDTRABALHOCIENTIFICO) as ULTIMO FROM posgraduacao.tbltrabalhoscientificos";
+        
+        return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
+    }
+    
+    public function ConsultaCodigo($id){
+        $sql="SELECT IDTRABALHOCIENTIFICO FROM tbltrabalhoscientificos WHERE IDTRABALHOCIENTIFICO = '$id'";        
+        return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
+    }
+    public function InserirAnexoTrabalhos($idtrab) {
+        $sql = "INSERT INTO posgraduacao.tblanexotrablhoscientificos VALUES (NULL'$idtrab',0)";
+        echo $sql;
         return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
     }
 }

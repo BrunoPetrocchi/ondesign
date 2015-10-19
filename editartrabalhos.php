@@ -63,7 +63,7 @@ $VarAnexoTrabalhoCientifico = $clsTrabalhos -> ExibirAnexoTrabalhoCientifico($_G
                          <td><?php echo $VarAnexoTrabalhoCientifico [$i]['NOME']; ?></td>
                          <td><a href="#" onclick="javascript:confirmar(<?= $VarExibirAnexoLista[$i]['IDTRABALHOCIENTIFICO']; ?>)" title="Apagar" ><img src="img/apagar.png" /></a>
 
-                              <a href="?pagina=editartrabalhos&id=<?php echo $VarExibirAnexoLista[$i]['IDTRABALHOCIENTIFICO']; ?>"  title="Visualizar"><img src="img/visualizar.png" /></a>
+                              <a href="?pagina=cadanexotrabalhos&codigo=<?php echo $VarExibirAnexoLista[$i]['IDTRABALHOCIENTIFICO']; ?>"  title="Visualizar"><img src="img/visualizar.png" /></a>
 
                          </td>
                     </tr>

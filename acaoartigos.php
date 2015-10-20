@@ -1,11 +1,9 @@
 <?php
     if ($_GET['acao'] == 'cadastrar') {
     $VarInserirArtigos = $clsArtigos->CadArtigos( $_POST['txtTitulo'], $_POST['txtAutor'], $_POST['datepicker'], $_POST['txtDescricao']);
-<<<<<<< HEAD
+
    //exit();
-=======
-   exit();
->>>>>>> fa6440b9e5e35fb3c94869818b13947cd63b7bc3
+
     echo '<script>alert("Artigo Salvo com Sucesso");</script>';
     echo "<script type='text/javascript'>window.location='?pagina=listaartigos'; </script>";
 }

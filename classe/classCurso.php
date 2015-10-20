@@ -24,7 +24,12 @@ class Cursos {
      }
 
      public function ConsultarCursoId($id) {
-          $sql = "SELECT * FROM posgraduacao.tblcursos WHERE IDCURSO = '$id'";
+          $sql = "SELECT IDUSUARIO, NOME, NIVEL
+          PUBLICOALVO,NOME,NIVEL,PUBLICOALVO,
+          OBJETIVOS,POSSIBILIDADESPROFISSIONAIS,
+          ESTRUTURAOFERECIDA, MODULOS, DURACAO
+          INICIO, HORARIO, TURMAMINIMA, REQUISITOS, EMBASAMENTOLEGAL,
+          INVESTIMENTO,CONVENIOS,MEC,OBSERVACAO FROM posgraduacao.tblcursos WHERE IDCURSO = '$id'";
           return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
      }
 

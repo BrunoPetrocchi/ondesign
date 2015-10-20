@@ -65,7 +65,7 @@ include ("classe/classCurso.php"); $clsCurso = new Cursos();
                             $_GET['pagina'] == "editarartigos" ||
                             $_GET['pagina'] == "editarusuarios" ||
                             $_GET['pagina'] == "editarvideo" ||
-                            $_GET['pagina'] == "editarcursos" ||
+                            $_GET['pagina'] == "editarcurso" ||
                             $_GET['pagina'] == "editareventos" ||
                             $_GET['pagina'] == "editartrabalhos" ||
                             $_GET['pagina'] == "principal"

@@ -2,7 +2,7 @@
 $VarExibirCurso = $clsCurso->ConsultarCursoId($_GET['id']);
 ?>
 
-<form method="post" name="frmusuarios" id="frmusuarios" action="?pagina=acaocurso&acao=editar">
+<form method="post" name="frmusuarios" id="frmusuarios" action="?pagina=acaocurso&acao=editar&id=<?php echo $VarExibirCurso [0]['IDCURSO'];  ?>">
     <div class="">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
@@ -21,27 +21,26 @@ $VarExibirCurso = $clsCurso->ConsultarCursoId($_GET['id']);
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form-group">
-                                            <label class="control-label">NÃ­vel</label>
+                                            <label class="control-label">Nívell</label>
                                             <select id="ddlnivel" name="ddlnivel" class="form-control">
-                                                <option>Lato Sensu</option>
-                                                <option>AperfeiÃ§oamento</option>
+                                                 <option value="1">Lato Sensu</option>
+                                                 <option value="2">AperfeiÃ§oamento</option>
                                             </select>
                                         </div>
                                     </div>
-
-                                    <div class="col-lg-6">
+                                     <div class="col-lg-6">
                                         <div class="form-group">
-                                            <label class="control-label">Usuário</label>
-                                            <select id="ddlAtivo" name="ddlAtivo" class="form-control">
-                                                <option value="1">Sim</option>
-                                                <option value="0">NÃ£o</option>
+                                            <label class="control-label">Usuarios</label>
+                                            <select id="txtusuarios" name="txtusuarios" class="form-control">
+                                                <option value="1">Lato Sensu</option>
+                                                <option value="2">AperfeiÃ§oamento</option>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label">PÃºblico-Alvo</label>
+                                    <label class="control-label">Público-Alvo</label>
                                     <textarea id="txtPublicoAlvo" rows="3" name="txtPublicoAlvo" class="form-control"><?php echo $VarExibirCurso[0]['PUBLICOALVO']; ?></textarea>
                                 </div>
 
@@ -61,7 +60,7 @@ $VarExibirCurso = $clsCurso->ConsultarCursoId($_GET['id']);
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label">MÃ³dulos (separados por ponto e vÃ­rgula ( ; ))</label>
+                                    <label class="control-label">Módulos (separados por ponto e vírgula ( ; ))</label>
                                     <textarea id="txtModulos" rows="3" name="txtModulos" class=" form-control"><?php echo $VarExibirCurso[0]['MODULOS']; ?></textarea>
                                 </div>
 
@@ -76,12 +75,12 @@ $VarExibirCurso = $clsCurso->ConsultarCursoId($_GET['id']);
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label">HorÃ¡rio</label>
+                                    <label class="control-label">Horário</label>
                                     <textarea id="txtHorario" rows="3" name="txtHorario" class=" form-control"><?php echo $VarExibirCurso[0]['HORARIO']; ?></textarea>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label">Turma MÃ­nima</label>
+                                    <label class="control-label">Turma Mínima</label>
                                     <textarea id="txtTurmaMinima" rows="3" name="txtTurmaMinima" class=" form-control"><?php echo $VarExibirCurso[0]['TURMAMINIMA']; ?></textarea>
                                 </div>
 
@@ -101,12 +100,12 @@ $VarExibirCurso = $clsCurso->ConsultarCursoId($_GET['id']);
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label">ObservaÃ§Ãµes</label>
+                                    <label class="control-label">Observação</label>
                                     <textarea id="txtObservacao" rows="3" name="txtObservacao" class=" form-control"><?php echo $VarExibirCurso[0]['OBSERVACAO']; ?></textarea>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label">ConvÃªnios</label>
+                                    <label class="control-label">Convênios</label>
                                     <textarea id="txtConvenios" rows="3" name="txtConvenios" class=" form-control"><?php echo $VarExibirCurso[0]['CONVENIOS']; ?></textarea>
                                 </div>
 
@@ -114,11 +113,7 @@ $VarExibirCurso = $clsCurso->ConsultarCursoId($_GET['id']);
                                     <label class="control-label">Portaria MEC</label>
                                     <input type="text" id="txtPortariaMEC" name="txtPortariaMEC" class=" form-control" value="<?php echo $VarExibirCurso[0]['MEC']; ?>" />
                                 </div>
-                                 <div class="form-group">
-                                    <label class="control-label">Observação</label>
-                                    <textarea id="txtObservacao" rows="3" name="txtObservacao" class=" form-control" ><?php echo $VarExibirCurso[0]['OBSERVACAO']; ?></textarea>
-                                </div>
-                            </div>
+                               </div>
                         </div>
                     </div>
 

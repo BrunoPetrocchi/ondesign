@@ -38,7 +38,7 @@
 
                                 <div class="form-group">
                                     <label class="control-label">Público-Alvo</label>
-                                    <textarea id="txtPublicoAlvo" rows="3" name="txtPublicoAlvo" class="form-control"></textarea>
+                                    <textarea id="txtpublico" rows="3" name="txtpublico" class="form-control"></textarea>
                                 </div>
 
                                 <div class="form-group">
@@ -48,7 +48,7 @@
 
                                 <div class="form-group">
                                     <label class="control-label">Possibilidades Profissionais</label>
-                                    <textarea id="txtPossibilidadesProfissionais" rows="3" name="txtPossibilidadesProfissionais" class=" form-control"></textarea>
+                                    <textarea id="txtPossibilidades" rows="3" name="txtPossibilidades" class=" form-control"></textarea>
                                 </div>
 
                                 <div class="form-group">

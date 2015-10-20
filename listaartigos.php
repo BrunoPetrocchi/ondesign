@@ -25,9 +25,15 @@ $VarExibirArtigos = $clsArtigos->ExibirArtigos();
                 <td><?php echo $VarExibirArtigos[$i]['AUTOR']; ?></td>
                 <td><?php echo $VarExibirArtigos[$i]['DATA']; ?></td>
                 <td><?php echo $VarExibirArtigos[$i]['ARTIGO']; ?></td>
+<<<<<<< HEAD
                 <td><a href="#" onclick="javascript:confirmar(<?= $VarExibirArtigos[$i]['IDARTIGO']; ?>)" title="Apagar" ><img src="img/apagar.png" /></a>
 
                     <a href="?pagina=editarartigos&id=<?php echo $VarExibirArtigos[$i]['IDARTIGO']; ?>"  title="Visualizar"><img src="img/visualizar.png" /></a>
+=======
+                <td><a href="#" onclick="javascript:confirmar(<?= $VarListaEventos[$i]['IDEVENTO']; ?>)" title="Apagar" ><img src="img/apagar.png" /></a>
+
+                    <a href="?pagina=editareventos&id=<?php echo $VarListaEventos[$i]['IDEVENTO']; ?>"  title="Visualizar"><img src="img/visualizar.png" /></a>
+>>>>>>> fa6440b9e5e35fb3c94869818b13947cd63b7bc3
 
 
                 </td>

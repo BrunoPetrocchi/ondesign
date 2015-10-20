@@ -14,7 +14,7 @@ class Cursos {
           '$publico','$objetivos','$possibilidades','$estrutura',
           '$modulo','$duracao','$inicio','$horario','$turma','$requisitos',
           '$embasamento','$investimento','$convenios','$mec','$observacao',0 )";
-          //echo $sql;
+         echo $sql;
           return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
      }
 
@@ -43,7 +43,7 @@ class Cursos {
           INICIO='$inicio', HORARIO='$horario', TURMAMINIMA='$turma', REQUISITOS='$requisitos', EMBASAMENTOLEGAL='$embasamento',
           INVESTIMENTO='$investimento',CONVENIOS='$convenios',MEC='$mec',
           OBSERVACAO = '$observacao' WHERE  IDCURSO = '$idcurso'";
-          echo $sql;
+          //echo $sql;
           return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
      }
 

@@ -36,5 +36,10 @@ class Artigos {
         return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
     }
     
+    public function ApagarArtigos($id) {
+        $sql = "UPDATE posgraduacao.tblartigos SET APAGADO = 1 WHERE IDARTIGO = '$id'";
+       // echo $sql;
+        return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
+    }
 }
 ?>

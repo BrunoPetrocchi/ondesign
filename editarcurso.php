@@ -98,12 +98,6 @@ $VarExibirCurso = $clsCurso->ConsultarCursoId($_GET['id']);
                                     <label class="control-label">Investimento</label>
                                     <textarea id="txtInvestimento" rows="3" name="txtInvestimento" class=" form-control"><?php echo $VarExibirCurso[0]['INVESTIMENTO']; ?></textarea>
                                 </div>
-
-                                <div class="form-group">
-                                    <label class="control-label">Observação</label>
-                                    <textarea id="txtObservacao" rows="3" name="txtObservacao" class=" form-control"><?php echo $VarExibirCurso[0]['OBSERVACAO']; ?></textarea>
-                                </div>
-
                                 <div class="form-group">
                                     <label class="control-label">Convênios</label>
                                     <textarea id="txtConvenios" rows="3" name="txtConvenios" class=" form-control"><?php echo $VarExibirCurso[0]['CONVENIOS']; ?></textarea>
@@ -112,6 +106,11 @@ $VarExibirCurso = $clsCurso->ConsultarCursoId($_GET['id']);
                                 <div class="form-group">
                                     <label class="control-label">Portaria MEC</label>
                                     <input type="text" id="txtPortariaMEC" name="txtPortariaMEC" class=" form-control" value="<?php echo $VarExibirCurso[0]['MEC']; ?>" />
+                                </div>
+                                 
+                                <div class="form-group">
+                                    <label class="control-label">Observação</label>
+                                    <textarea id="txtObservacao" rows="3" name="txtObservacao" class=" form-control"><?php echo $VarExibirCurso[0]['OBSERVACAO']; ?></textarea>
                                 </div>
                                </div>
                         </div>

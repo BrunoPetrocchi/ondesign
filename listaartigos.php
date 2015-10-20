@@ -36,5 +36,17 @@ $VarExibirArtigos = $clsArtigos->ExibirArtigos();
           <?php
      }
      ?>
-
 </table>
+ <br/>
+     Total de <strong><?php echo count($VarExibirArtigos); ?></strong> Artigos Ativos.
+     <br/>
+<script type="text/javascript">
+     function confirmar(codigo_usuario) { // pode ser qualquer nome
+          if (confirm("Deseja Realmente Excluir?")) {
+               window.location = "?pagina=acaoartigos&acao=excluir&id=" + codigo_usuario; // pode ser qualquer nome
+               return true;
+          } else {
+               return false;
+          }
+     }
+</script>

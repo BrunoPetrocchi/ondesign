@@ -33,5 +33,17 @@ $VarExibirCurso = $clsCurso->ExibirCursos();
         <?php
     }
     ?>
-
 </table>
+<br/>
+Total de <strong><?php echo count($VarExibirCurso); ?></strong> Cursos Ativos.
+<br/>
+<script type="text/javascript">
+     function confirmar(codigo_usuario) { // pode ser qualquer nome
+          if (confirm("Deseja Realmente Excluir?")) {
+               window.location = "?pagina=acaocurso&acao=excluir&id=" + codigo_usuario; // pode ser qualquer nome
+               return true;
+          } else {
+               return false;
+          }
+     }
+</script>

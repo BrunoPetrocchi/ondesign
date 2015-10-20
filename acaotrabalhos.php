@@ -33,11 +33,11 @@ if ($_GET['acao'] == 'cadastrar') {
 
 if ($_GET['acao'] == 'cadastrar_anexo') {
      $trabalhos = time() . '_' . renomearArquivo($_FILES['anexo']['name']);
-     $VarInserirAnexoTrabalhos = $clsTrabalhos->InserirAnexoTrabalhos($trabalhos);
+     $VarInserirAnexoTrabalhos = $clsTrabalhos->InserirAnexoTrabalhos($_POST['anexo']);
      if ($VarInserirAnexoTrabalhos == 1) {
           (move_uploaded_file($_FILES['anexo']['tmp_name'], "./anexos/anexo_tc/" . $_GET['id'] . "/" . $trabalhos));
      }
-     exit();
+     //exit();
      echo '<script>alert("Anexo Trabalho Científico Salvo com Sucesso");</script>';
      echo "<script type='text/javascript'>window.location='?pagina=listatrabalhos'; </script>";
 }

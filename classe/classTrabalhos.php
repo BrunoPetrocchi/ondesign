@@ -59,8 +59,9 @@ class Trabalhos {
         $sql="SELECT IDTRABALHOCIENTIFICO FROM tbltrabalhoscientificos WHERE IDTRABALHOCIENTIFICO = '$id'";        
         return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
     }
-    public function InserirAnexoTrabalhos($idtrab) {
-        $sql = "INSERT INTO posgraduacao.tblanexotrablhoscientificos VALUES (NULL'$idtrab',0)";
+    
+    public function InserirAnexoTrabalhos($id,$anexo) {
+        $sql = "INSERT INTO posgraduacao.tblanexotrablhoscientificos VALUES (NULL,'$id','$anexo',0)";
         echo $sql;
         return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
     }

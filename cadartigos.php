@@ -26,14 +26,14 @@
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label class="control-label">Data</label>
-                                        <input type="text" id="txtData" name="txtData" class="form-control" placeholder="Informe a data" />
+                                        <input type="text" id="datepicker" name="datepicker" class="form-control" placeholder="Informe a data" />
                                     </div>
                                 </div>
                             </div>  
 
                             <div class="form-group">
                                 <label class="control-label">Descrição</label>
-                                <textarea type="text" id="txtDescricao" name="txtDescricao" rows="30" class="form-control" placeholder="Descrição"></textarea>
+                                <textarea type="text" id="txtDescricao" name="txtDescricao" rows="10" class="form-control" placeholder="Descrição"></textarea>
                             </div>
 
                         </div>

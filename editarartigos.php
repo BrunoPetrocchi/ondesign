@@ -2,7 +2,7 @@
 $VarExibirArtigos = $clsArtigos->ConsultarArtigoId($_GET['id'])
 ?>
 
-<form method="post" name="frmartigo" id="frmartigo" action="?pagina=acaoartigo&acao=cadastrar">
+<form method="post" name="frmartigo" id="frmartigo" action="?pagina=acaoartigos&acao=editar&id=<?php echo $VarExibirArtigos [0]['IDARTIGO']; ?>">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
             <div class="panel panel-default">
@@ -30,14 +30,14 @@ $VarExibirArtigos = $clsArtigos->ConsultarArtigoId($_GET['id'])
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label class="control-label">Data</label>
-                                        <input type="text" id="txtData" name="txtData" class="form-control" placeholder="Informe a data" value="<?php echo $VarExibirArtigos [0] ['DATA'] ?>"/>
+                                        <input type="text" id="datepicker" name="datepicker" class="form-control" placeholder="Informe a data" value="<?php echo $VarExibirArtigos [0] ['DATA'] ?>"/>
                                     </div>
                                 </div>
                             </div>  
 
                             <div class="form-group">
                                 <label class="control-label">Descrição</label>
-                                <textarea type="text" id="txtDescricao" name="txtDescricao" rows="30" class="form-control" placeholder="Descrição" value="<?php echo $VarExibirArtigos [0] ['ARTIGO'] ?>"></textarea>
+                                <textarea type="text" id="txtDescricao" name="txtDescricao" rows="10" class="form-control" placeholder="Descrição"><?php echo $VarExibirArtigos [0] ['ARTIGO'] ?></textarea>
                             </div>
 
                         </div>
@@ -45,7 +45,7 @@ $VarExibirArtigos = $clsArtigos->ConsultarArtigoId($_GET['id'])
                 </div>
 
                 <div class="panel-footer">
-                    <input type="submit" id="btnSalvar" value="Salvar" class="btn btn-primary" placeholder="Salvar"/>
+                    <input type="submit" id="btnSalvar" value="Salvar" class="btn btn-primary"/>
                 </div>
             </div>
         </div>

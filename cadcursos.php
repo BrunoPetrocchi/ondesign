@@ -17,102 +17,96 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form-group">
-                                            <label class="control-label">N√≠vel</label>
-                                            <select id="ddlnivel" name="ddlnivel" class="form-control">
-                                                <option>Lato Sensu</option>
-                                                <option>Aperfei√ßoamento</option>
+                                            <label class="control-label">Nivel</label>
+                                            <select id="txtnivel" name="txtnivel" class="form-control">
+                                                 <option value="1">Lato Sensu</option>
+                                                <option value="2">AperfeiÁoamento</option>
                                             </select>
                                         </div>
                                     </div>
-
-                                    <div class="col-lg-6">
+                                     
+                                     <div class="col-lg-6">
                                         <div class="form-group">
-                                            <label class="control-label">Ativo</label>
-                                            <select id="ddlAtivo" name="ddlAtivo" class="form-control">
-                                                <option value="1">Sim</option>
-                                                <option value="0">N√£o</option>
+                                            <label class="control-label">Usu·rios</label>
+                                            <select id="txtusuarios" name="txtusuarios" class="form-control">
+                                                <option value="1">Lato Sensu</option>
+                                                <option value="2">AperfeiÁoamento</option>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label">P√∫blico-Alvo</label>
-                                    <textarea id="txtPublicoAlvo" rows="6" name="txtPublicoAlvo" class="form-control"></textarea>
+                                    <label class="control-label">P˙blico-Alvo</label>
+                                    <textarea id="txtPublicoAlvo" rows="3" name="txtPublicoAlvo" class="form-control"></textarea>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="control-label">Objetivos</label>
-                                    <textarea id="txtObjetivo" rows="6" name="txtObjetivo" class=" form-control"></textarea>
+                                    <textarea id="txtObjetivo" rows="3" name="txtObjetivo" class=" form-control"></textarea>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="control-label">Possibilidades Profissionais</label>
-                                    <textarea id="txtPossibilidadesProfissionais" rows="6" name="txtPossibilidadesProfissionais" class=" form-control"></textarea>
+                                    <textarea id="txtPossibilidadesProfissionais" rows="3" name="txtPossibilidadesProfissionais" class=" form-control"></textarea>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="control-label">Estrutura Oferecida</label>
-                                    <textarea id="txtEstruturaOferecida" rows="6" name="txtEstruturaOferecida" class=" form-control"></textarea>
+                                    <textarea id="txtEstruturaOferecida" rows="3" name="txtEstruturaOferecida" class=" form-control"></textarea>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label">M√≥dulos (separados por ponto e v√≠rgula ( ; ))</label>
-                                    <textarea id="txtModulos" rows="6" name="txtModulos" class=" form-control"></textarea>
+                                    <label class="control-label">Modulos (separados por ponto e virgula ( ; ))</label>
+                                    <textarea id="txtModulos" rows="3" name="txtModulos" class=" form-control"></textarea>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label">Dura√ß√£o</label>
-                                    <textarea id="txtDuracao" rows="6" name="txtDuracao" class=" form-control"></textarea>
+                                    <label class="control-label">DuraÁ„o</label>
+                                    <textarea id="txtDuracao" rows="3" name="txtDuracao" class=" form-control"></textarea>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label">In√≠cio</label>
-                                    <textarea id="txtInicio" rows="6" name="txtInicio" class=" form-control"></textarea>
+                                    <label class="control-label">InÌcio</label>
+                                    <textarea id="txtInicio" rows="3" name="txtInicio" class=" form-control"></textarea>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label">Hor√°rio</label>
-                                    <textarea id="txtHorario" rows="6" name="txtHorario" class=" form-control"></textarea>
+                                    <label class="control-label">Hor·rio</label>
+                                    <textarea id="txtHorario" rows="3" name="txtHorario" class=" form-control"></textarea>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label">Turma M√≠nima</label>
-                                    <textarea id="txtTurmaMinima" rows="6" name="txtTurmaMinima" class=" form-control"></textarea>
+                                    <label class="control-label">Turma MÌnima</label>
+                                    <textarea id="txtTurmaMinima" rows="3" name="txtTurmaMinima" class=" form-control"></textarea>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="control-label">Requisitos</label>
-                                    <textarea id="txtRequisitos" rows="6" name="txtRequisitos" class=" form-control"></textarea>
+                                    <textarea id="txtRequisitos" rows="3" name="txtRequisitos" class=" form-control"></textarea>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="control-label">Embasamento Legal</label>
-                                    <textarea id="txtEmbasamentoLegal" rows="6" name="txtEmbasamentoLegal" class=" form-control"></textarea>
+                                    <textarea id="txtEmbasamentoLegal" rows="3" name="txtEmbasamentoLegal" class=" form-control"></textarea>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="control-label">Investimento</label>
-                                    <textarea id="txtInvestimento" rows="6" name="txtInvestimento" class=" form-control"></textarea>
+                                    <textarea id="txtInvestimento" rows="3" name="txtInvestimento" class=" form-control"></textarea>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label">Observa√ß√µes</label>
-                                    <textarea id="txtObservacao" rows="6" name="txtObservacao" class=" form-control"></textarea>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="control-label">Conv√™nios</label>
-                                    <textarea id="txtConvenios" rows="6" name="txtConvenios" class=" form-control"></textarea>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="control-label">√çcone</label>
-                                    <input id="fupIcone" name="fupIcone" type="file" />
+                                    <label class="control-label">ConvÍnios</label>
+                                    <textarea id="txtConvenios" rows="3" name="txtConvenios" class=" form-control"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Portaria MEC</label>
-                                    <input type="text" id="txtPortariaMEC" name="txtPortariaMEC" class=" form-control" />
+                                    <input type="text" id="txtPortariaMEC" rows="3" name="txtPortariaMEC" class=" form-control" />
+                                </div>
+                                 <div class="form-group">
+                                    <label class="control-label">ObservaÁ„o</label>
+                                    <textarea id="txtObservacao" rows="3" name="txtObservacao" class=" form-control"></textarea>
                                 </div>
                             </div>
                         </div>

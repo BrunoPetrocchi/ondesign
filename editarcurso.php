@@ -111,10 +111,6 @@ $VarExibirCurso = $clsCurso->ConsultarCursoId($_GET['id'])
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label">Ícone</label>
-                                    <input id="fupIcone" name="fupIcone" type="file" />
-                                </div>
-                                <div class="form-group">
                                     <label class="control-label">Portaria MEC</label>
                                     <input type="text" id="txtPortariaMEC" name="txtPortariaMEC" class=" form-control" />
                                 </div>

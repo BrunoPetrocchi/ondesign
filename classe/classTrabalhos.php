@@ -22,7 +22,11 @@ class Trabalhos {
         return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
     }
     
-     
+      public function ConsultarAnexo(){
+        $sql="SELECT IDANEXOTC , IDTRABALHOCIENTIFICO, NOME FROM posgraduacao.tblanexotrabalhoscientificos WHERE APAGADO = 0";
+        return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
+    }
+    
     public function ExibirTrabalhosId($id){
         $sql="SELECT IDTRABALHOCIENTIFICO, TITULO, AUTOR, DATA_TRABALHO 
           FROM posgraduacao.tbltrabalhoscientificos
@@ -32,7 +36,7 @@ class Trabalhos {
     
     public function ExibirAnexoTrabalhoCientifico($id){
         $sql="SELECT IDANEXOTC, IDTRABALHOCIENTIFICO, NOME FROM posgraduacao.tblanexotrabalhoscientificos
-          WHERE IDTRABALHOCIENTIFICO = '$id'";
+          WHERE APAGADO = 0 AND IDTRABALHOCIENTIFICO = '$id'";
         return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
     }
     
@@ -49,6 +53,12 @@ class Trabalhos {
         return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
     }
     
+    public function ApagarAnexoTrabalhos($id) {
+        $sql = "UPDATE posgraduacao.tblanexotrabalhoscientificos SET APAGADO = 1 WHERE IDANEXOTC = '$id'";
+        //echo $sql;
+        return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
+    }
+    
      public function ExibirTrabalhosMax(){
         $sql="SELECT MAX(IDTRABALHOCIENTIFICO) as ULTIMO FROM posgraduacao.tbltrabalhoscientificos";
         
@@ -61,7 +71,7 @@ class Trabalhos {
     }
     
     public function InserirAnexoTrabalhos($id,$anexo) {
-        $sql = "INSERT INTO posgraduacao.tblanexotrablhoscientificos VALUES (NULL,'$id','$anexo',0)";
+        $sql = "INSERT INTO posgraduacao.tblanexotrabalhoscientificos VALUES (NULL,'$id','$anexo',0)";
         echo $sql;
         return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
     }

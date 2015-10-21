@@ -43,7 +43,7 @@ $VarExibirTrabalhos = $clsTrabalhos->ExibirTrabalhosId($_GET['id']);
 <?php
 $VarAnexoTrabalhoCientifico = $clsTrabalhos -> ExibirAnexoTrabalhoCientifico($_GET['id']);
 ?>
-<a href="?pagina=cadanexotrabalhos"><input type="submit" value="Anexar" class="btnmenu" style="float:right" /></a>
+<a href="?pagina=cadanexotrabalhos&codigo=<?php echo $_GET['id']?>"><input type="submit" value="Anexar" class="btnmenu" style="float:right" /></a>
 <br/><br/>
 <form method="post" name="listaanexotrabalho" id="listaanexotrabalho">
       <table width="100%"  border="1" bordercolor="#CCCCCC" style="border-collapse:collapse;" cellpadding="0" cellspacing="0" id="tbl_relatorio" >
@@ -61,11 +61,10 @@ $VarAnexoTrabalhoCientifico = $clsTrabalhos -> ExibirAnexoTrabalhoCientifico($_G
                     <tr>
                          <td><?php echo $VarAnexoTrabalhoCientifico [$i]['IDANEXOTC']; ?></td>
                          <td><?php echo $VarAnexoTrabalhoCientifico [$i]['NOME']; ?></td>
-                         <td><a href="#" onclick="javascript:confirmar(<?= $VarExibirAnexoLista[$i]['IDTRABALHOCIENTIFICO']; ?>)" title="Apagar" ><img src="img/apagar.png" /></a>
+                         <td><a href="#" onclick="javascript:confirmar(<?= $VarAnexoTrabalhoCientifico[$i]['IDANEXOTC']; ?>)" title="Apagar" ><img src="img/apagar.png" /></a>
 
-                              <a href="?pagina=cadanexotrabalhos&codigo=<?php echo $VarExibirAnexoLista[$i]['IDTRABALHOCIENTIFICO']; ?>"  title="Visualizar"><img src="img/visualizar.png" /></a>
-
-                         </td>
+                              <a href="./anexos/anexo_tc/<?php echo $_GET['id']; ?>/<?php echo $VarAnexoTrabalhoCientifico[0]['NOME']; ?>"  title="Visualizar" target="_blank"><img src="img/visualizar.png" /></a>
+                        </td>
                     </tr>
                </tbody>
 
@@ -77,9 +76,9 @@ $VarAnexoTrabalhoCientifico = $clsTrabalhos -> ExibirAnexoTrabalhoCientifico($_G
      <br/><br/><br/><br/>     
 </form>
 <script type="text/javascript">
-     function confirmar(codigo_usuario) { // pode ser qualquer nome
+     function confirmar(codigo_anexo) { // pode ser qualquer nome
           if (confirm("Deseja Realmente Excluir?")) {
-               window.location = "?pagina=acaotrabalhos&acao=excluir&id=" + codigo_usuario; // pode ser qualquer nome
+               window.location = "?pagina=acaotrabalhos&acao=apagar_anexo&id=" + codigo_anexo; // pode ser qualquer nome
                return true;
           } else {
                return false;

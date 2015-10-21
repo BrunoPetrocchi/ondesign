@@ -49,6 +49,7 @@ include ("classe/classCurso.php"); $clsCurso = new Cursos();
                             $_GET['pagina'] == "acaocurso" ||
                             $_GET['pagina'] == "acaoeventos" ||
                             $_GET['pagina'] == "acaotrabalhos" ||
+                            $_GET['pagina'] == "acaocurriculum" ||
                             $_GET['pagina'] == "cadartigos" ||
                             $_GET['pagina'] == "cadvideo" ||
                             $_GET['pagina'] == "cadusuarios" ||
@@ -56,18 +57,21 @@ include ("classe/classCurso.php"); $clsCurso = new Cursos();
                             $_GET['pagina'] == "cadeventos" ||
                             $_GET['pagina'] == "cadtrabalhos" ||
                             $_GET['pagina'] == "cadanexotrabalhos" ||
+                            $_GET['pagina'] == "cadcurriculum" ||
                             $_GET['pagina'] == "listaartigos" ||
                             $_GET['pagina'] == "listavideo" ||
                             $_GET['pagina'] == "listausuarios" ||
                             $_GET['pagina'] == "listacursos" ||
                             $_GET['pagina'] == "listaeventos" ||
                             $_GET['pagina'] == "listatrabalhos" ||
+                            $_GET['pagina'] == "listacurriculum" ||
                             $_GET['pagina'] == "editarartigos" ||
                             $_GET['pagina'] == "editarusuarios" ||
                             $_GET['pagina'] == "editarvideo" ||
                             $_GET['pagina'] == "editarcurso" ||
                             $_GET['pagina'] == "editareventos" ||
                             $_GET['pagina'] == "editartrabalhos" ||
+                            $_GET['pagina'] == "editarcurriculum" ||
                             $_GET['pagina'] == "principal"
                     ) {
                          require_once ($_GET['pagina'] . ".php");

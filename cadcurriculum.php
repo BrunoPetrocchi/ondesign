@@ -81,7 +81,7 @@
                               <div class="col-lg-6"> 
                                    <div class="form-group">
                                         <label class="control-label" >Treinamentos separados por ;</label>
-                                       <textarea id="treinamentos" rows="3" name="treinamentos" class=" form-control"></textarea>
+                                        <textarea id="treinamentos" rows="3" name="treinamentos" class=" form-control"></textarea>
                                    </div>
                               </div>
                               <div class="col-lg-6"> 
@@ -90,59 +90,7 @@
                                         <textarea id="idioma" rows="3" name="idioma" class=" form-control"></textarea>
                                    </div>
                               </div>
-                         </div>
-                         <h3>Dados Formação Acadêmica</h3>
-                         <br/>
-                         <div class="row">
-                              <div class="col-lg-6"> 
-                                   <div class="form-group">
-                                        <label class="control-label" >Período Inicial separados por ;</label>
-                                       <textarea id="treinamentos" rows="3" name="treinamentos" class=" form-control"></textarea>
-                                   </div>
-                              </div>
-                              <div class="col-lg-6"> 
-                                   <div class="form-group">
-                                        <label class="control-label" >Período Final separados por  ;</label>
-                                        <textarea id="idioma" rows="3" name="idioma" class=" form-control"></textarea>
-                                   </div>
-                              </div>
-                         </div>
-                         <div class="row">
-                              <div class="col-lg-6"> 
-                                   <div class="form-group">
-                                        <label class="control-label" >Data de Inicio</label>
-                                        <input type="text" id="datepicker" name="datepicker" class="form-control datas" placeholder="Insira a data inicial"></input>
-                                   </div>
-                              </div>
-                              <div class="col-lg-6"> 
-                                   <div class="form-group">
-                                        <label class="control-label">Data Final</label>
-                                        <input type="text" id="datepicker" name="datepicker" class="form-control datas" placeholder="Insira a data final"></input>
-                                   </div>
-                              </div>
-                         </div>
-                         <div class="row">
-                              <div class="col-lg-6"> 
-                                   <div class="form-group">
-                                        <label class="control-label" >Tipo Formação</label>
-                                        <input type="text" id="formacao" name="formacao" class="form-control datas" placeholder="Insira a formação"></input>
-                                   </div>
-                              </div>
-                              <div class="col-lg-6"> 
-                                   <div class="form-group">
-                                        <label class="control-label">Instituição</label>
-                                        <input type="text" id="intituicao" name="intituicao" class="form-control datas" placeholder="Insira a instituição"></input>
-                                   </div>
-                              </div>
-                         </div>
-                         <div class="row">
-                              <div class="col-lg-12"> 
-                                   <div class="form-group">
-                                        <label class="control-label">Área de Atuação</label>
-                                        <input type="text" id="atuacao" name="atuacao" class="form-control datas" placeholder="Insira a área de atuação"></input>
-                                   </div>
-                              </div>
-                         </div>
+                         </div>                         
                     </div>
                </div>
                <div class="panel-footer">

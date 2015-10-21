@@ -58,6 +58,8 @@ include ("classe/classCurso.php"); $clsCurso = new Cursos();
                             $_GET['pagina'] == "cadtrabalhos" ||
                             $_GET['pagina'] == "cadanexotrabalhos" ||
                             $_GET['pagina'] == "cadcurriculum" ||
+                            $_GET['pagina'] == "cadcurriculumacademico" ||
+                            $_GET['pagina'] == "cadcurriculumprofissional" ||
                             $_GET['pagina'] == "listaartigos" ||
                             $_GET['pagina'] == "listavideo" ||
                             $_GET['pagina'] == "listausuarios" ||

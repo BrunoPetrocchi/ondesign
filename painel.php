@@ -10,6 +10,7 @@ include ("classe/classTrabalhos.php"); $clsTrabalhos = new Trabalhos();
 include ("classe/classArtigo.php"); $clsArtigos = new Artigos();
 include ("classe/classCurso.php"); $clsCurso = new Cursos();
 include ("classe/classCurriculum.php"); $clsCurriculum = new Curriculum();
+include ("classe/classDicas.php"); $clsDicas = new Dicas();
 
 ?>		
 
@@ -51,6 +52,7 @@ include ("classe/classCurriculum.php"); $clsCurriculum = new Curriculum();
                             $_GET['pagina'] == "acaoeventos" ||
                             $_GET['pagina'] == "acaotrabalhos" ||
                             $_GET['pagina'] == "acaocurriculum" ||
+                            $_GET['pagina'] == "acaodicas" ||
                             $_GET['pagina'] == "cadartigos" ||
                             $_GET['pagina'] == "cadvideo" ||
                             $_GET['pagina'] == "cadusuarios" ||
@@ -61,6 +63,7 @@ include ("classe/classCurriculum.php"); $clsCurriculum = new Curriculum();
                             $_GET['pagina'] == "cadcurriculum" ||
                             $_GET['pagina'] == "cadcurriculumacademico" ||
                             $_GET['pagina'] == "cadcurriculumprofissional" ||
+                            $_GET['pagina'] == "caddicas" ||
                             $_GET['pagina'] == "listaartigos" ||
                             $_GET['pagina'] == "listavideo" ||
                             $_GET['pagina'] == "listausuarios" ||
@@ -68,6 +71,7 @@ include ("classe/classCurriculum.php"); $clsCurriculum = new Curriculum();
                             $_GET['pagina'] == "listaeventos" ||
                             $_GET['pagina'] == "listatrabalhos" ||
                             $_GET['pagina'] == "listacurriculum" ||
+                            $_GET['pagina'] == "listadicas" ||
                             $_GET['pagina'] == "editarartigos" ||
                             $_GET['pagina'] == "editarusuarios" ||
                             $_GET['pagina'] == "editarvideo" ||
@@ -75,6 +79,7 @@ include ("classe/classCurriculum.php"); $clsCurriculum = new Curriculum();
                             $_GET['pagina'] == "editareventos" ||
                             $_GET['pagina'] == "editartrabalhos" ||
                             $_GET['pagina'] == "editarcurriculum" ||
+                            $_GET['pagina'] == "editardicas" ||
                             $_GET['pagina'] == "principal"
                     ) {
                          require_once ($_GET['pagina'] . ".php");

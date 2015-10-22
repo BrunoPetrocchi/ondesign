@@ -1,5 +1,6 @@
 <?php
 $VarExibirCurso = $clsCurso->ConsultarCursoId($_GET['id']);
+
 ?>
 
 <form method="post" name="frmusuarios" id="frmusuarios" action="?pagina=acaocurso&acao=editar&id=<?php echo $VarExibirCurso [0]['IDCURSO'];  ?>">

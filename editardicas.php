@@ -1,3 +1,8 @@
+<?php
+     $VarEditarDicas = $clsDicas -> EditarDicas ($_GET['id']);
+  //   echo '<pre>'; print_r($VarEditarDicas);echo '</pre>';
+?>
+
 <form method="post" name="frmdicas" id="frmdicas" action="?pagina=acaodicas&acao=cadastrar">
      <div class="row">
           <div class="col-lg-8 col-lg-offset-2">
@@ -16,7 +21,7 @@
                                              $VarConsultaCurso = $clsCurso->ExibirCursos();
                                              for ($i = 0; $i < count($VarConsultaCurso); $i++) {
                                                   ?>
-                                                  <option value="<?php echo $VarConsultaCurso [$i]['IDCURSO']; ?>">
+                                                  <option value="<?php echo $VarConsultaCurso [$i]['IDCURSO']; ?>"<?php echo $VarConsultaCurso [$i]['IDCURSO'] == $VarEditarDicas [0]['IDCURSO'] ? 'selected="selected"' : '' ?>
                                                        <?php echo $VarConsultaCurso [$i]['NOME']; ?>
                                                   </option>
                                                   <?php
@@ -28,16 +33,16 @@
                               <div class="col-lg-12"> 
                                    <div class="form-group">
                                         <label class="control-label">Titulo</label>
-                                        <input type="titulo" id="titulo" name="titulo" class="form-control" placeholde="Informe o titulo da dica"></input>
+                                        <input type="titulo" id="titulo" name="titulo" class="form-control" value="<?php echo $VarEditarDicas [0]['TITULO']; ?>"></input>
                                    </div> 
 
                                    <div class="form-group">
                                         <label class="control-label" >Data do Cadastro</label>
-                                        <input type="text" id="datepicker" name="datepicker" class="form-control datas"placeholde="Insira a data"></input>
+                                        <input type="text" id="datepicker" name="datepicker" class="form-control datas" value="<?php echo $VarEditarDicas [0]['DATA']; ?>"></input>
                                    </div>
                                    <div class="form-group">
                                         <label class="control-label" >Descrição</label>
-                                        <textarea id="descricao" rows="3" name="descricao" class=" form-control"></textarea>
+                                        <textarea id="descricao" rows="3" name="descricao" class=" form-control"><?php echo $VarEditarDicas [0]['DETALHE']; ?></textarea>
                                    </div>
                               </div>
                          </div>

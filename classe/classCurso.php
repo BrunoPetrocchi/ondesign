@@ -14,7 +14,7 @@ class Cursos {
           '$publico','$objetivos','$possibilidades','$estrutura',
           '$modulo','$duracao','$inicio','$horario','$turma','$requisitos',
           '$embasamento','$investimento','$convenios','$mec','$observacao',0 )";
-         echo $sql;
+        // echo $sql;
           return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
      }
 

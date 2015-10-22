@@ -1,7 +1,7 @@
 <script type="text/javascript" src="js/scripts.js"></script>
 <a href="?pagina=listaeventos"><input type="submit" value="Voltar" class="btnmenu" style="float:right" /></a>
 <br/><br/>
-<form method="post" name="cadeventos" class="cadeventos" action="?pagina=acaoeventos&acao=cadastrar">
+<form method="post" name="cadeventos" class="cadeventos" action="?pagina=acaocurriculum&acao=cadastrar">
      <div class="row">
           <div class="col-lg-8 col-lg-offset-2">
                <div class="panel panel-default">
@@ -22,7 +22,7 @@
                          <div class="row">
                               <div class="col-lg-6"> 
                                    <div class="form-group">
-                                        <label class="control-label" >Data</label>
+                                        <label class="control-label" >Data de Nascimento</label>
                                         <input type="text" id="datepicker" name="datepicker" class="form-control datas" placeholder="Insira a data"></input>
                                    </div>
                               </div>

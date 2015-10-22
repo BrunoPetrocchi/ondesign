@@ -9,6 +9,7 @@ include ("classe/classUsuarios.php"); $clsUsuarios = new Usuarios();
 include ("classe/classTrabalhos.php"); $clsTrabalhos = new Trabalhos();
 include ("classe/classArtigo.php"); $clsArtigos = new Artigos();
 include ("classe/classCurso.php"); $clsCurso = new Cursos();
+include ("classe/classCurriculum.php"); $clsCurriculum = new Curriculum();
 
 ?>		
 

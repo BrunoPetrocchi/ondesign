@@ -1,7 +1,7 @@
 <?php
-$ExibirCurriculum = $clsCurriculum ->ExibirCurriculum();
+$ExibirCurriculum = $clsCurriculum ->ExibirArtigos();
 ?>
-<h2>Lista Curriculum</h2>
+<h2>Lista Curriculum Profissional</h2>
 <a href="?pagina=cadcurriculum"><input type="submit" value="Cadastrar" class="btnmenu" style="float:right" /></a>
 <br/><br/>
 <form method="post" name="listausuarios" id="listausuarios">
@@ -28,10 +28,10 @@ $ExibirCurriculum = $clsCurriculum ->ExibirCurriculum();
                          <td><?php echo $ExibirCurriculum [$i]['TELEFONERESIDENCIAL']; ?></td>
                          <td><?php echo $ExibirCurriculum [$i]['TELEFONECELULAR']; ?></td>
                          <td><?php echo $ExibirCurriculum [$i]['CIDADE']; ?></td>
-                         <td><a href="#" onclick="javascript:confirmar(<?= $ExibirCurriculum[$i]['IDCURRICULO']; ?>)" title="Apagar" ><img src="img/apagar.png" /></a>
-                             <a href="?pagina=editarcurriculum&id=<?php echo $ExibirCurriculum[$i]['IDCURRICULO']; ?>"  title="Visualizar"><img src="img/visualizar.png" /></a>
-                             <a href="?pagina=listacurriculumacademico&id=<?php echo $ExibirCurriculum[$i]['IDCURRICULO']; ?>" title="Visualizar Academico"><img src="img/diplomaoff.png"/></a>
-                             <a href="?pagina=listacurriculumprofissional" title="Visualizar Profissional"><img src="img/profoff.png"/></a>
+                         <td><a href="#" onclick="javascript:confirmar(<?= $ExibirCurriculum[$i]['IDUSUARIO']; ?>)" title="Apagar" ><img src="img/apagar.png" /></a>
+                             <a href="?pagina=editarcurriculum&id=<?php echo $ExibirCurriculum[$i]['IDUSUARIO']; ?>"  title="Visualizar"><img src="img/visualizar.png" /></a>
+                             <a href="?pagina=editarcurriculumacademico" title="Visualizar Academico"><img src="img/diplomaoff.png"/></a>
+                             <a href="?pagina=editarcurriculumprofissional" title="Visualizar Profissional"><img src="img/profoff.png"/></a>
                             
                          </td>
                     </tr>

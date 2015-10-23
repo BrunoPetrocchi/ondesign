@@ -13,7 +13,7 @@ function renomearArquivo($string) {
 
 $trabalhos = '00' . '_' . renomearArquivo($_FILES['anexo']['name']);
 if ($_GET['acao'] == 'cadastrar') {
-     $VarInserirTrabalhos = $clsTrabalhos->CadTrabalhos($_POST['nome'], $_POST['autor'], $_POST['datepicker'], $nome_final);
+     $VarInserirTrabalhos = $clsTrabalhos->CadTrabalhos($_POST['selcursos'],$_POST['nome'], $_POST['autor'], $_POST['datepicker'], $trabalhos);
      if ($VarInserirTrabalhos == 1) {
           $VarMaxTrabalhos = $clsTrabalhos->ExibirTrabalhosMax();
           mkdir("./anexos/anexo_tc/" . $VarMaxTrabalhos [0]['ULTIMO'], 0777);
@@ -23,6 +23,7 @@ if ($_GET['acao'] == 'cadastrar') {
                (move_uploaded_file($_FILES['anexo']['tmp_name'], "./anexos/anexo_tc/" . $VarMaxTrabalhos [0]['ULTIMO'] . "/" . $trabalhos));
           }
      }
+     exit();
      echo '<script>alert("Trabalho Científico Salvo com Sucesso");</script>';
      echo "<script type='text/javascript'>window.location='?pagina=listatrabalhos'; </script>";
 }
@@ -45,7 +46,7 @@ if ($_GET['acao'] == 'cadastrar_anexo') {
 <?php
 
 if ($_GET['acao'] == 'editar') {
-     $VarEditarTrabalhos = $clsTrabalhos->EditarTrabalhos($_GET['id'], $_POST['nome'], $_POST['email'], $_POST['datepicker']);
+     $VarEditarTrabalhos = $clsTrabalhos->EditarTrabalhos($_GET['id'],$_POST['selcursos'], $_POST['nome'], $_POST['email'], $_POST['datepicker']);
      //exit();
      echo '<script>alert("Usuario Alterado com Sucesso");</script>';
      echo "<script type='text/javascript'>window.location='?pagina=listatrabalhos'; </script>";

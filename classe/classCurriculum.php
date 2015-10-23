@@ -14,7 +14,7 @@ class Curriculum {
           return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
      }
 
-     public function ExibirArtigos() {
+     public function ExibirCurriculum() {
           $sql = "SELECT IDCURRICULO, NOME, TELEFONERESIDENCIAL, TELEFONECELULAR, CIDADE FROM posgraduacao.tblcurriculos WHERE APAGADO = 0  ORDER BY IDCURRICULO DESC";
           return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
      }

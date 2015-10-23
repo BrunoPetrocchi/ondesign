@@ -8,8 +8,8 @@ class Trabalhos {
         $this->db = $GLOBALS[db_homepage];
     }
     
-    public function CadTrabalhos($titulo,$autor,$data_trabalho,$anexo) {
-        $sql = "INSERT INTO posgraduacao.tbltrabalhoscientificos VALUES (NULL,'$titulo','$autor','$data_trabalho','$anexo',0)";
+    public function CadTrabalhos($idcurso,$titulo,$autor,$data_trabalho,$anexo) {
+        $sql = "INSERT INTO posgraduacao.tbltrabalhoscientificos VALUES (NULL,'$idcurso','$titulo','$autor','$data_trabalho','$anexo',0)";
         echo $sql;
         return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
     }
@@ -40,8 +40,8 @@ class Trabalhos {
         return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
     }
     
-    public function EditarTrabalhos($id,$titulo,$autor,$data_trabalho) {
-        $sql = "UPDATE posgraduacao.tbltrabalhoscientificos SET TITULO = '$titulo', AUTOR = '$autor', DATA_TRABALHO = '$data_trabalho'
+    public function EditarTrabalhos($id,$idcurso,$titulo,$autor,$data_trabalho) {
+        $sql = "UPDATE posgraduacao.tbltrabalhoscientificos SET IDCURSO= '$idcurso'TITULO = '$titulo', AUTOR = '$autor', DATA_TRABALHO = '$data_trabalho'
              WHERE IDTRABALHOCIENTIFICO = '$id'";
         //echo $sql;
         return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);

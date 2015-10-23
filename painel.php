@@ -71,6 +71,8 @@ include ("classe/classDicas.php"); $clsDicas = new Dicas();
                             $_GET['pagina'] == "listaeventos" ||
                             $_GET['pagina'] == "listatrabalhos" ||
                             $_GET['pagina'] == "listacurriculum" ||
+                            $_GET['pagina'] == "listacurriculumacademico" ||
+                            $_GET['pagina'] == "listacurriculumprofissional" ||
                             $_GET['pagina'] == "listadicas" ||
                             $_GET['pagina'] == "editarartigos" ||
                             $_GET['pagina'] == "editarusuarios" ||
@@ -79,6 +81,9 @@ include ("classe/classDicas.php"); $clsDicas = new Dicas();
                             $_GET['pagina'] == "editareventos" ||
                             $_GET['pagina'] == "editartrabalhos" ||
                             $_GET['pagina'] == "editarcurriculum" ||
+                            $_GET['pagina'] == "editarcurriculumacademico" ||
+                            $_GET['pagina'] == "editarcurriculumprofissional" ||
+                            
                             $_GET['pagina'] == "editardicas" ||
                             $_GET['pagina'] == "principal"
                     ) {

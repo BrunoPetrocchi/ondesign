@@ -34,6 +34,18 @@ class Eventos {
           //	echo $sql;
           return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
      }
+     
+      public function ListaAnexoEventos($id) {
+          $sql = "SELECT IDEVENTOFOTO, IDEVENTO, NOME  FROM posgraduacao.tbleventofotos WHERE IDEVENTO = '$id' ORDER BY IDEVENTO DESC";
+          //	echo $sql;
+          return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
+     }
+     
+     public function EventosMaxId() {
+          $sql = "SELECT MAX(IDEVENTOFOTO) AS ULTIMO FROM posgraduacao.tbleventofotos";
+          //	echo $sql;
+          return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
+     }
 
 }
 

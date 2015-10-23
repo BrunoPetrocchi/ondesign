@@ -11,6 +11,7 @@ include ("classe/classArtigo.php"); $clsArtigos = new Artigos();
 include ("classe/classCurso.php"); $clsCurso = new Cursos();
 include ("classe/classCurriculum.php"); $clsCurriculum = new Curriculum();
 include ("classe/classDicas.php"); $clsDicas = new Dicas();
+include ("classe/classVagaEmprego.php"); $clsVagaEmprego = new VagaEmprego();
 
 ?>		
 
@@ -53,6 +54,7 @@ include ("classe/classDicas.php"); $clsDicas = new Dicas();
                             $_GET['pagina'] == "acaotrabalhos" ||
                             $_GET['pagina'] == "acaocurriculum" ||
                             $_GET['pagina'] == "acaodicas" ||
+                            $_GET['pagina'] == "acaovagaemprego" ||
                             $_GET['pagina'] == "cadartigos" ||
                             $_GET['pagina'] == "cadvideo" ||
                             $_GET['pagina'] == "cadusuarios" ||
@@ -60,10 +62,12 @@ include ("classe/classDicas.php"); $clsDicas = new Dicas();
                             $_GET['pagina'] == "cadeventos" ||
                             $_GET['pagina'] == "cadtrabalhos" ||
                             $_GET['pagina'] == "cadanexotrabalhos" ||
+                            $_GET['pagina'] == "cadanexoeventos" ||
                             $_GET['pagina'] == "cadcurriculum" ||
                             $_GET['pagina'] == "cadcurriculumacademico" ||
                             $_GET['pagina'] == "cadcurriculumprofissional" ||
                             $_GET['pagina'] == "caddicas" ||
+                            $_GET['pagina'] == "cadanexoeventos" ||
                             $_GET['pagina'] == "listaartigos" ||
                             $_GET['pagina'] == "listavideo" ||
                             $_GET['pagina'] == "listausuarios" ||
@@ -74,6 +78,7 @@ include ("classe/classDicas.php"); $clsDicas = new Dicas();
                             $_GET['pagina'] == "listacurriculumacademico" ||
                             $_GET['pagina'] == "listacurriculumprofissional" ||
                             $_GET['pagina'] == "listadicas" ||
+                            $_GET['pagina'] == "listavagaemprego" ||
                             $_GET['pagina'] == "editarartigos" ||
                             $_GET['pagina'] == "editarusuarios" ||
                             $_GET['pagina'] == "editarvideo" ||
@@ -83,6 +88,7 @@ include ("classe/classDicas.php"); $clsDicas = new Dicas();
                             $_GET['pagina'] == "editarcurriculum" ||
                             $_GET['pagina'] == "editarcurriculumacademico" ||
                             $_GET['pagina'] == "editarcurriculumprofissional" ||
+                            $_GET['pagina'] == "editarvagaemprego" ||
                             
                             $_GET['pagina'] == "editardicas" ||
                             $_GET['pagina'] == "principal"

@@ -32,3 +32,49 @@ $VarExibeEventosId = $clsEventos->ConsultaEventosId($_GET['id']);
         </div>
     </div>
 </form>
+<br/><br/>
+<?php
+$VarExibirAnexoEventos = $clsEventos->ListaAnexoEventos($_GET['id']);
+?>
+<a href="?pagina=cadanexoeventos&codigo=<?php echo $_GET['id']?>"><input type="submit" value="Anexar" class="btnmenu" style="float:right" /></a>
+<br/><br/>
+<form method="post" name="listaanexotrabalho" id="listaanexotrabalho">
+      <table width="100%"  border="1" bordercolor="#CCCCCC" style="border-collapse:collapse;" cellpadding="0" cellspacing="0" id="tbl_relatorio" >
+          <thead>
+               <tr>
+                    <th>Código Anexo</th>
+                    <th>Anexo</th>
+                    <th>Opções</th>
+               </tr>
+          </thead>
+          <?php
+          for ($i = 0; $i < count($VarExibirAnexoEventos); $i++) {
+               ?>
+               <tbody border="solid 1px" bordercolor="#FFFFFF">
+                    <tr>
+                         <td><?php echo $VarExibirAnexoEventos [$i]['IDEVENTO']; ?></td>
+                         <td><?php echo $VarExibirAnexoEventos [$i]['NOME']; ?></td>
+                         <td><a href="#" onclick="javascript:confirmar(<?= $VarExibirAnexoEventos[$i]['IDEVENTO']; ?>)" title="Apagar" ><img src="img/apagar.png" /></a>
+
+                              <a href="./anexos/eventos/<?php echo $_GET['id']; ?>/<?php echo $VarExibirAnexoEventos[0]['NOME']; ?>"  title="Visualizar" target="_blank"><img src="img/visualizar.png" /></a>
+                        </td>
+                    </tr>
+               </tbody>
+
+               <?php
+          }
+          ?>
+          
+     </table>
+     <br/><br/><br/><br/>     
+</form>
+<script type="text/javascript">
+     function confirmar(codigo_anexo) { // pode ser qualquer nome
+          if (confirm("Deseja Realmente Excluir?")) {
+               window.location = "?pagina=acaotrabalhos&acao=apagar_anexo&id=" + codigo_anexo; // pode ser qualquer nome
+               return true;
+          } else {
+               return false;
+          }
+     }
+</script>

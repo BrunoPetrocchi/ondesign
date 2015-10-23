@@ -68,6 +68,7 @@ include ("classe/classVagaEmprego.php"); $clsVagaEmprego = new VagaEmprego();
                             $_GET['pagina'] == "cadcurriculumprofissional" ||
                             $_GET['pagina'] == "caddicas" ||
                             $_GET['pagina'] == "cadanexoeventos" ||
+                            $_GET['pagina'] == "cadvagaemprego" ||
                             $_GET['pagina'] == "listaartigos" ||
                             $_GET['pagina'] == "listavideo" ||
                             $_GET['pagina'] == "listausuarios" ||

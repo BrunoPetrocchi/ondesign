@@ -39,7 +39,7 @@ $VarExibirDicas = $clsDicas->ExibirDicas();
 <script type="text/javascript">
      function confirmar(codigo_usuario) { // pode ser qualquer nome
           if (confirm("Deseja Realmente Excluir?")) {
-               window.location = "?pagina=acaoartigos&acao=excluir&id=" + codigo_usuario; // pode ser qualquer nome
+               window.location = "?pagina=acaodicas&acao=excluir&id=" + codigo_usuario; // pode ser qualquer nome
                return true;
           } else {
                return false;

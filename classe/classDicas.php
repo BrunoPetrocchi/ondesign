@@ -27,7 +27,19 @@ class Dicas {
           FROM posgraduacao.tbldicas AS A 
           LEFT JOIN posgraduacao.tblcursos AS B ON (A.IDCURSO = B.IDCURSO)
           WHERE A.APAGADO = 0 AND IDDICA = '$id'";
+          
           return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
+     }
+      public function AlterarDicas($id,$idcurso,$titulo,$data,$detalhe ) {
+          $sql = "UPDATE posgraduacao.tbldicas SET IDCURSO = '$idcurso', TITULO = '$titulo', DATA = '$data', DETALHE='$detalhe' WHERE IDDICA = '$id'";
+         // echo $sql;
+          return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
+     }
+     
+     public function ExcluirDicas($id) {
+          $sql = "UPDATE posgraduacao.tbldicas SET APAGADO = 1 WHERE IDDICA = '$id'";
+          echo $sql;
+          return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
      }
 
 }

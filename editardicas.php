@@ -3,12 +3,12 @@
   //   echo '<pre>'; print_r($VarEditarDicas);echo '</pre>';
 ?>
 
-<form method="post" name="frmdicas" id="frmdicas" action="?pagina=acaodicas&acao=cadastrar">
+<form method="post" name="frmdicas" id="frmdicas" action="?pagina=acaodicas&acao=editar&id=<?php echo $VarEditarDicas [0]['IDDICA'];?> ">   
      <div class="row">
           <div class="col-lg-8 col-lg-offset-2">
                <div class="panel panel-default">
                     <div class="panel-heading">
-                         <h3 class="panel-title">Cadastrar Dicas</h3>
+                         <h3 class="panel-title">Editar Dicas</h3>
                     </div>
                     <div class="panel-body">  
                          <div class="row">
@@ -19,9 +19,10 @@
                                              <option value="">Selecione</option>
                                              <?php
                                              $VarConsultaCurso = $clsCurso->ExibirCursos();
+                                            
                                              for ($i = 0; $i < count($VarConsultaCurso); $i++) {
                                                   ?>
-                                                  <option value="<?php echo $VarConsultaCurso [$i]['IDCURSO']; ?>"<?php echo $VarConsultaCurso [$i]['IDCURSO'] == $VarEditarDicas [0]['IDCURSO'] ? 'selected="selected"' : '' ?>
+                                                  <option value="<?php echo $VarConsultaCurso [$i]['IDCURSO']; ?>"<?php echo $VarConsultaCurso [$i]['IDCURSO'] == $VarEditarDicas [0]['IDCURSO'] ? 'selected="selected"' : '' ?>>
                                                        <?php echo $VarConsultaCurso [$i]['NOME']; ?>
                                                   </option>
                                                   <?php
